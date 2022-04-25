@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:salitu/constantes.dart';
 
 class Inicio extends StatefulWidget {
   Inicio();
@@ -9,6 +10,15 @@ class Inicio extends StatefulWidget {
 }
 
 class _InicioState extends State<Inicio> {
+  int _selectedIndex = 0;
+  void _onItemTapped(int index) {
+    setState(() {
+      Navigator.of(context).pushNamed(
+        navbarNavigator[index],
+      );
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -158,21 +168,19 @@ class _InicioState extends State<Inicio> {
             BottomNavigationBarItem(
               icon: Icon(
                 FontAwesomeIcons.heart,
-                color: Colors.grey,
               ),
               label: 'Minha Saúde',
             ),
             BottomNavigationBarItem(
               icon: Icon(
                 FontAwesomeIcons.user,
-                color: Colors.grey,
               ),
               label: 'Perfil',
             ),
           ],
-          //currentIndex: _selectedIndex,
+          currentIndex: _selectedIndex,
           selectedItemColor: Colors.blueAccent[300],
-          //onTap: _onItemTapped,
+          onTap: _onItemTapped,
         ),
       ),
     );

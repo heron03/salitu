@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:salitu/components/inicio.dart';
+import 'package:salitu/components/minha_saude.dart';
 
 void main() {
   runApp(
@@ -11,6 +12,7 @@ void main() {
           appBarTheme: AppBarTheme(backgroundColor: Colors.white)),
       routes: {
         '/components/inicio': (context) => Inicio(),
+        '/components/minha_saude': (context) => MinhaSaude(),
       },
       initialRoute: '/components/inicio',
     ),
