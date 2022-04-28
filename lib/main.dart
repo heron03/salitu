@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:salitu/components/inicio.dart';
 import 'package:salitu/components/minha_saude.dart';
+import 'package:salitu/components/perfil.dart';
 
 void main() {
   runApp(
@@ -13,6 +14,7 @@ void main() {
       routes: {
         '/components/inicio': (context) => Inicio(),
         '/components/minha_saude': (context) => MinhaSaude(),
+        '/components/perfil': (context) => Perfil(),
       },
       initialRoute: '/components/inicio',
     ),
