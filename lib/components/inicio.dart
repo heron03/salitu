@@ -136,21 +136,29 @@ class _InicioState extends State<Inicio> {
                         'img/medico.png',
                         Color(0xFF180CCC),
                         'Melhores Médicos da Sua Região',
+                        '/components/lista_medicos',
+                        context,
                       ),
                       cardComImagem(
                         'img/paciente.png',
                         Color(0xFF0D36D6),
                         'Meu Hitórico de Saúde',
+                        '/components/minha_saude',
+                        context,
                       ),
                       cardComImagem(
                         'img/hospital.png',
                         Colors.blue[800],
                         'Buscar Clinicas médicas',
+                        '',
+                        context,
                       ),
                       cardComImagem(
                         'img/remedios.png',
                         Color(0xFF0DA0D6),
-                        'Minhas Receitas',
+                        'Meus Remédios',
+                        '/components/lista_remedios',
+                        context,
                       ),
                     ],
                   ),
@@ -162,7 +170,7 @@ class _InicioState extends State<Inicio> {
         bottomNavigationBar: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: Icon(FontAwesomeIcons.houseMedical),
+              icon: Icon(FontAwesomeIcons.house),
               label: 'Início',
             ),
             BottomNavigationBarItem(
@@ -215,8 +223,12 @@ Column circleCategorias(icone, textoCard) {
   );
 }
 
-Container cardComImagem(localImagem, corCard, textoCard) {
-  return Container(
+InkWell cardComImagem(localImagem, corCard, textoCard, proximaTela, context) {
+  return InkWell(
+    onTap: () =>  Navigator.of(context).pushNamed(
+        proximaTela,
+      ),
+    child: Container(
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(10),
       color: corCard,
@@ -245,6 +257,7 @@ Container cardComImagem(localImagem, corCard, textoCard) {
           ),
         ),
       ],
+    ),
     ),
   );
 }

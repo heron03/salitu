@@ -41,16 +41,18 @@ class _PerfilState extends State<Perfil> {
                     ],
                   ),
                 ),
-                
                 Divider(indent: 16),
                 ListTile(
                   leading: Icon(Icons.message),
-                  title: Text('Messages'),
+                  title: Text('Mensagens'),
                 ),
                 Divider(indent: 16),
                 ListTile(
                   leading: Icon(FontAwesomeIcons.capsules),
                   title: Text('Remédios'),
+                  onTap: () => Navigator.of(context).pushNamed(
+                    '/components/lista_remedios',
+                  ),
                 ),
                 Divider(indent: 16),
                 ListTile(
@@ -70,7 +72,8 @@ class _PerfilState extends State<Perfil> {
                 Divider(indent: 16),
                 ListTile(
                   leading: Icon(
-                    FontAwesomeIcons.locationDot,),
+                    FontAwesomeIcons.locationDot,
+                  ),
                   title: Text('Endereços'),
                 ),
                 Divider(indent: 16),
@@ -123,7 +126,7 @@ Column circleCategorias(icone, textoCard) {
               color: Colors.grey.withOpacity(0.2),
               spreadRadius: 5,
               blurRadius: 7,
-              offset: Offset(0, 3), // changes position of shadow
+              offset: Offset(0, 3),
             ),
           ],
         ),
