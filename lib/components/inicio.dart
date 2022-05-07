@@ -150,7 +150,7 @@ class _InicioState extends State<Inicio> {
                         'img/hospital.png',
                         Colors.blue[800],
                         'Buscar Clinicas médicas',
-                        '',
+                        '/components/lista_clinicas',
                         context,
                       ),
                       cardComImagem(
