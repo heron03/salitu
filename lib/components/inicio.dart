@@ -143,7 +143,7 @@ class _InicioState extends State<Inicio> {
                         'img/paciente.png',
                         Color(0xFF0D36D6),
                         'Meu Hitórico de Saúde',
-                        '',
+                        '/components/minha_saude',
                         context,
                       ),
                       cardComImagem(
@@ -156,8 +156,8 @@ class _InicioState extends State<Inicio> {
                       cardComImagem(
                         'img/remedios.png',
                         Color(0xFF0DA0D6),
-                        'Minhas Receitas',
-                        '',
+                        'Meus Remédios',
+                        '/components/lista_remedios',
                         context,
                       ),
                     ],
