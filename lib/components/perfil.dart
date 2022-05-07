@@ -41,7 +41,6 @@ class _PerfilState extends State<Perfil> {
                     ],
                   ),
                 ),
-                
                 Divider(indent: 16),
                 ListTile(
                   leading: Icon(Icons.message),
@@ -51,6 +50,9 @@ class _PerfilState extends State<Perfil> {
                 ListTile(
                   leading: Icon(FontAwesomeIcons.capsules),
                   title: Text('Remédios'),
+                  onTap: () => Navigator.of(context).pushNamed(
+                    '/components/lista_remedios',
+                  ),
                 ),
                 Divider(indent: 16),
                 ListTile(
@@ -70,7 +72,8 @@ class _PerfilState extends State<Perfil> {
                 Divider(indent: 16),
                 ListTile(
                   leading: Icon(
-                    FontAwesomeIcons.locationDot,),
+                    FontAwesomeIcons.locationDot,
+                  ),
                   title: Text('Endereços'),
                 ),
                 Divider(indent: 16),
